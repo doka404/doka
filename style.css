@@ -73,9 +73,15 @@ header p{
     background:white;
     border-radius:20px;
     overflow:hidden;
-    box-shadow:
-    0 8px 20px rgba(0,0,0,.08);
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
     transition:.3s;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.book-content{
+    flex:1;
 }
 
 .book-card:hover{
@@ -89,6 +95,27 @@ header p{
 
 .book-content{
     padding:20px;
+
+    display:flex;
+    flex-direction:column;
+
+    height:100%;
+}
+
+.book-content p{
+    flex:1;
+}
+
+.btn{
+    display:inline-block;
+    margin-top:20px;
+    padding:12px 24px;
+    background:var(--pink);
+    color:white;
+    text-decoration:none;
+    border-radius:30px;
+
+    align-self:flex-start;
 }
 
 .book-content h3{
