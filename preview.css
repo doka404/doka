@@ -31,31 +31,35 @@ padding:20px;
 }
 
 .page{
+    display:none;
 
-display:none;
+    background:#fffdf8;
+    padding:50px;
+    border-radius:20px;
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
 
-background:white;
+    min-height:550px;
 
-padding:50px;
+    text-align:center;      /* Überschrift zentrieren */
 
-border-radius:20px;
-
-box-shadow:0 10px 35px rgba(0,0,0,.08);
-
-min-height:500px;
-
-line-height:1.9;
-
-font-size:1.1rem;
-
+    line-height:1.9;
+    font-size:1.1rem;
 }
 
 .page.active{
+    display:block;
+    animation:fade .4s;
+}
+.page img{
+    display:block;
+    margin:30px auto 0 auto;   /* Bild mittig */
+    max-width:100%;
+    height:auto;
+}
 
-display:block;
-
-animation:fade .4s;
-
+.page h2{
+    margin:0 0 30px 0;
+    text-align:center;
 }
 
 .controls{
