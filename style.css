@@ -111,6 +111,24 @@ header p{font-size:1.1rem;}
     transform:translateY(-2px);
     text-decoration:none;
 }
+.btn-amazon{
+    display:inline-block;
+    align-self:flex-start;
+    margin-top:auto;
+    padding:12px 24px;
+    background:#ff9900;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn-amazon:hover{
+    background:#e68a00;
+    transform:translateY(-2px);
+    text-decoration:none;
+}
 
 .book-card.series::before{
     content:"SERIE";
