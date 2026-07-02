@@ -1,0 +1,118 @@
+/* Hero */
+
+.small-hero{
+    text-align:center;
+    padding:80px 20px 50px;
+}
+
+/* Grid */
+
+.certificate-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+    gap:35px;
+    margin:70px 0;
+}
+
+/* Karten */
+
+.certificate-card{
+    background:#fff;
+    border-radius:20px;
+    padding:35px;
+    text-align:center;
+    box-shadow:0 12px 30px rgba(0,0,0,.08);
+    transition:.25s ease;
+
+    display:flex;
+    flex-direction:column;
+}
+
+.certificate-card:hover{
+    transform:translateY(-6px);
+    box-shadow:0 18px 40px rgba(0,0,0,.12);
+}
+.certificate-card p{
+    margin:20px 0 30px;
+    line-height:1.7;
+    flex-grow:1;
+}
+
+.btn-certificate{
+    display:inline-block;
+    margin-top:auto;
+    padding:14px 30px;
+    background:#6fbf73;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn-certificate:hover{
+    background:#5aa85e;
+    transform:translateY(-2px);
+}
+
+/* Überschrift */
+
+.certificate-card h2{
+    margin-bottom:20px;
+    color:var(--dark);
+}
+
+/* Bild */
+
+.certificate-image{
+    width:180px;
+    max-width:100%;
+    display:block;
+    margin:0 auto 25px;
+    border-radius:10px;
+    box-shadow:0 8px 18px rgba(0,0,0,.15);
+}
+
+/* Beschreibung */
+
+.certificate-card p{
+    margin:20px 0 30px;
+    line-height:1.7;
+}
+
+/* Downloadbutton */
+
+.btn-certificate{
+    display:inline-block;
+    padding:14px 30px;
+    background:#6fbf73;
+    color:#fff;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:600;
+    transition:.2s;
+}
+
+.btn-certificate:hover{
+    background:#5aa85e;
+    transform:translateY(-2px);
+    text-decoration:none;
+}
+
+/* Mobil */
+
+@media (max-width:768px){
+
+    .certificate-grid{
+        grid-template-columns:1fr;
+    }
+
+    .certificate-card{
+        padding:25px;
+    }
+
+    .certificate-image{
+        width:150px;
+    }
+
+}
