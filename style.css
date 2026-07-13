@@ -210,3 +210,71 @@ a{color:inherit;}
     .books,.about{padding:40px 18px;}
     .book-grid{gap:20px;}
 }
+.popup-overlay{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.65);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:99999;
+    backdrop-filter:blur(4px);
+}
+
+.popup-box{
+
+    max-width:650px;
+    width:92%;
+    background:white;
+    border-radius:20px;
+    padding:40px;
+    position:relative;
+    animation:popup .35s ease;
+}
+
+@keyframes popup{
+
+from{
+opacity:0;
+transform:translateY(30px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+.popup-close{
+
+position:absolute;
+right:18px;
+top:12px;
+font-size:32px;
+cursor:pointer;
+background:none;
+border:none;
+
+}
+
+.popup-box h2{
+
+margin-top:0;
+text-align:center;
+
+}
+
+.popup-box p{
+
+line-height:1.8;
+
+}
+
+.popup-box .btn{
+
+margin-top:20px;
+width:100%;
+text-align:center;
+
+}
