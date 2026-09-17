@@ -1,0 +1,278 @@
+```html
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Dein Name | Links</title>
+  <meta name="description" content="Alle wichtigen Links von Dein Name">
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      min-height: 100vh;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      color: #fff;
+      background:
+        radial-gradient(circle at top, #242424 0%, #111 45%, #080808 100%);
+      display: flex;
+      justify-content: center;
+      padding: 40px 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 680px;
+      text-align: center;
+    }
+
+    /* Profil */
+    .profile {
+      margin-bottom: 28px;
+    }
+
+    .avatar {
+      width: 110px;
+      height: 110px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid rgba(255,255,255,.9);
+      box-shadow: 0 10px 35px rgba(0,0,0,.45);
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .username {
+      color: #aaa;
+      font-size: 15px;
+      margin-bottom: 12px;
+    }
+
+    .bio {
+      color: #ccc;
+      line-height: 1.5;
+      font-size: 15px;
+      max-width: 500px;
+      margin: auto;
+    }
+
+    /* Links */
+    .links {
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+
+    .link {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      min-height: 62px;
+      padding: 15px 55px 15px 20px;
+
+      color: #fff;
+      text-decoration: none;
+      font-weight: 600;
+
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+
+      transition:
+        transform .2s ease,
+        background .2s ease,
+        border-color .2s ease,
+        box-shadow .2s ease;
+    }
+
+    .link:hover {
+      transform: translateY(-3px) scale(1.01);
+      background: rgba(255,255,255,.14);
+      border-color: rgba(255,255,255,.25);
+      box-shadow: 0 12px 30px rgba(0,0,0,.25);
+    }
+
+    .link-icon {
+      position: absolute;
+      left: 20px;
+      font-size: 22px;
+    }
+
+    .arrow {
+      position: absolute;
+      right: 20px;
+      color: #aaa;
+      font-size: 20px;
+      transition: transform .2s ease;
+    }
+
+    .link:hover .arrow {
+      transform: translateX(4px);
+      color: #fff;
+    }
+
+    /* Spezielle GitHub-Karte */
+    .github {
+      background: linear-gradient(
+        135deg,
+        rgba(255,255,255,.14),
+        rgba(255,255,255,.06)
+      );
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 35px;
+      color: #666;
+      font-size: 13px;
+    }
+
+    footer a {
+      color: #888;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #fff;
+    }
+
+    /* Mobile */
+    @media (max-width: 500px) {
+      body {
+        padding: 30px 15px;
+      }
+
+      .avatar {
+        width: 95px;
+        height: 95px;
+      }
+
+      h1 {
+        font-size: 24px;
+      }
+
+      .link {
+        min-height: 58px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="container">
+
+    <!-- PROFIL -->
+    <section class="profile">
+
+      <!-- Dein Bild hier einsetzen -->
+      <img
+        class="avatar"
+        src="https://github.com/DEIN-GITHUB-NAME.png"
+        alt="Profilbild"
+      >
+
+      <h1>Dein Name</h1>
+
+      <div class="username">
+        @DEIN-GITHUB-NAME
+      </div>
+
+      <p class="bio">
+        Entwickler · Open Source · Technik 🚀<br>
+        Hier findest du meine Projekte und alle wichtigen Links.
+      </p>
+
+    </section>
+
+
+    <!-- LINKS -->
+    <section class="links">
+
+      <a
+        class="link github"
+        href="https://github.com/DEIN-GITHUB-NAME"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="link-icon">🐙</span>
+        <span>Mein GitHub</span>
+        <span class="arrow">→</span>
+      </a>
+
+
+      <a
+        class="link"
+        href="https://github.com/DEIN-GITHUB-NAME?tab=repositories"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="link-icon">💻</span>
+        <span>Meine Projekte</span>
+        <span class="arrow">→</span>
+      </a>
+
+
+      <a
+        class="link"
+        href="https://www.linkedin.com/in/DEIN-NAME"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="link-icon">💼</span>
+        <span>LinkedIn</span>
+        <span class="arrow">→</span>
+      </a>
+
+
+      <a
+        class="link"
+        href="https://instagram.com/DEIN-NAME"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <span class="link-icon">📸</span>
+        <span>Instagram</span>
+        <span class="arrow">→</span>
+      </a>
+
+
+      <a
+        class="link"
+        href="mailto:DEINE-MAIL@BEISPIEL.DE"
+      >
+        <span class="link-icon">✉️</span>
+        <span>E-Mail</span>
+        <span class="arrow">→</span>
+      </a>
+
+    </section>
+
+
+    <footer>
+      © 2026 Dein Name ·
+      <a href="https://github.com/DEIN-GITHUB-NAME">
+        GitHub
+      </a>
+    </footer>
+
+  </main>
+
+</body>
+</html>
+```
