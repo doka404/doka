@@ -1,0 +1,200 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fff7f2">
+  <title>Mit jedem Buch Gutes tun | VOTV Tierschutz</title>
+  <meta name="description" content="Entdecke unsere Malbücher. 100 % des Gewinns nach Abzug aller Kosten spenden wir an VOTV für den Tierschutz in der Türkei.">
+  <style>
+    :root {
+      --ink: #3e302b;
+      --muted: #705d55;
+      --pink: #ef5b83;
+      --pink-dark: #d83e6b;
+      --orange: #ff9b2f;
+      --cream: #fffaf6;
+      --green: #58683a;
+      --line: #f0ded3;
+      --shadow: 0 12px 32px rgba(87, 54, 39, .09);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: linear-gradient(180deg, #fff8f4 0%, #fffdfb 55%, #fff7f2 100%);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a { color: inherit; }
+    .wrap { width: min(1120px, calc(100% - 36px)); margin: 0 auto; }
+    .hero { text-align: center; padding: 64px 0 42px; }
+    .eyebrow {
+      display: inline-block; padding: 6px 13px; border-radius: 999px;
+      background: #ffe6ed; color: #a92f54; font-size: .82rem; font-weight: 800;
+      letter-spacing: .04em; text-transform: uppercase;
+    }
+    h1 {
+      margin: 18px auto 12px; max-width: 850px;
+      font-size: clamp(2.15rem, 6vw, 4.2rem); line-height: 1.08;
+      letter-spacing: -.045em;
+    }
+    h1 span { color: var(--pink-dark); }
+    .intro { max-width: 740px; margin: 0 auto; color: var(--muted); font-size: 1.08rem; }
+    .donation {
+      margin: 28px auto 0; max-width: 790px; padding: 22px;
+      border: 1px solid #f6d5df; border-radius: 22px;
+      background: rgba(255,255,255,.82); box-shadow: var(--shadow);
+    }
+    .donation strong { display: block; color: var(--pink-dark); font-size: clamp(1.35rem, 3vw, 2rem); line-height: 1.25; }
+    .donation p { margin: 9px 0 0; color: var(--muted); }
+    .paw { font-size: 1.3rem; }
+    .books { padding: 20px 0 58px; }
+    .section-title { text-align: center; margin: 0 0 8px; font-size: clamp(1.6rem, 3vw, 2.25rem); }
+    .section-subtitle { text-align: center; color: var(--muted); margin: 0 auto 28px; max-width: 650px; }
+    .grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 22px; }
+    .book {
+      overflow: hidden; border: 1px solid var(--line); border-radius: 22px;
+      background: #fff; box-shadow: var(--shadow); display: flex; flex-direction: column;
+    }
+    .image-placeholder {
+      min-height: 320px; aspect-ratio: 4 / 5; display: grid; place-items: center;
+      padding: 22px; text-align: center; color: #94776b;
+      background:
+        radial-gradient(circle at 20% 20%, rgba(255,255,255,.9) 0 8%, transparent 9%),
+        radial-gradient(circle at 80% 75%, rgba(255,255,255,.8) 0 10%, transparent 11%),
+        linear-gradient(145deg, #fbe3eb, #fff1d9 54%, #e7efdc);
+      border-bottom: 1px dashed #e9c8c1;
+    }
+    .image-placeholder:nth-child(1) { background-color: #fff0f4; }
+    .placeholder-inner { max-width: 250px; }
+    .placeholder-inner .symbol { font-size: 3rem; display: block; margin-bottom: 6px; }
+    .placeholder-inner strong { display: block; color: #6d5147; font-size: 1.05rem; }
+    .placeholder-inner small { display: block; margin-top: 6px; }
+    .book-content { padding: 20px; display: flex; flex-direction: column; flex: 1; }
+    .book h3 { margin: 0 0 8px; color: var(--pink-dark); font-size: 1.25rem; line-height: 1.25; }
+    .book p { margin: 0 0 18px; color: var(--muted); font-size: .95rem; }
+    .buttons { display: grid; gap: 9px; margin-top: auto; }
+    .btn {
+      display: block; width: 100%; text-align: center; text-decoration: none;
+      padding: 11px 14px; border-radius: 999px; font-weight: 750; font-size: .92rem;
+      border: 1px solid #f4d5c7; background: #fff8f1; color: #7b4a31;
+      transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: 0 6px 15px rgba(87,54,39,.12); }
+    .btn.primary { color: #fff; border-color: var(--orange); background: var(--orange); }
+    .btn.secondary { color: #fff; border-color: var(--green); background: var(--green); }
+    .note {
+      margin: 0 auto 60px; max-width: 900px; padding: 28px;
+      text-align: center; border-radius: 24px; background: #f3f5e9; border: 1px solid #e0e6cf;
+    }
+    .note h2 { margin: 0 0 8px; font-size: 1.6rem; }
+    .note p { margin: 0; color: #5c6549; }
+    footer { border-top: 1px solid var(--line); padding: 22px 0 30px; text-align: center; color: var(--muted); font-size: .88rem; }
+    footer p { margin: 4px 0; }
+    @media (max-width: 820px) {
+      .grid { grid-template-columns: 1fr; max-width: 540px; margin: 0 auto; }
+      .image-placeholder { min-height: 280px; }
+      .hero { padding-top: 42px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header class="hero">
+    <div class="wrap">
+      <span class="eyebrow">Mit jedem Buch Gutes tun 🐾</span>
+      <h1>Deine Kreativität kann Leben ein bisschen <span>besser machen.</span></h1>
+      <p class="intro">Entdecke unsere liebevoll gestalteten Malbücher und mach mit uns auf den Tierschutz aufmerksam. Gemeinsam können wir Freude verschenken und Tieren helfen, die Unterstützung brauchen.</p>
+      <div class="donation">
+        <span class="paw" aria-hidden="true">🐾 ❤️ 🐾</span>
+        <strong>100 % des Gewinns für den Tierschutz</strong>
+        <p>Nach Abzug aller Kosten spenden wir den gesamten Gewinn aus diesen drei Büchern an <b>VOTV – Tierschutz in der Türkei.</b></p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="books wrap" aria-labelledby="books-title">
+      <h2 class="section-title" id="books-title">Finde dein neues Lieblingsbuch</h2>
+      <p class="section-subtitle">Die Bildflächen und Links sind Platzhalter. Ersetze sie einfach durch deine Grafiken und die passenden Ziel-URLs.</p>
+
+      <div class="grid">
+        <article class="book">
+          <div class="image-placeholder" role="img" aria-label="Platzhalter für das Cover von Chubby Kittens">
+            <div class="placeholder-inner">
+              <span class="symbol" aria-hidden="true">🐱 💗</span>
+              <strong><img src="https://dominickannengiesser.de/img/chubby-kitten-cover.png"></strong>
+              <small>Hier das Cover von „Chubby Kittens“ einsetzen</small>
+            </div>
+          </div>
+          <div class="book-content">
+            <h3>Chubby Kittens</h3>
+            <p>Süße, knuffige Katzen zum Ausmalen – für entspannte und kreative Momente.</p>
+            <div class="buttons">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Bei Amazon kaufen – Link einfügen</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Mehr zum Buch – Link einfügen</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Buch teilen – Link einfügen</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="image-placeholder" role="img" aria-label="Platzhalter für das Cover von 30 Cozy Coloring Rooms">
+            <div class="placeholder-inner">
+              <span class="symbol" aria-hidden="true">🏡 ☕</span>
+              <strong>GRAFIK-PLATZHALTER 2</strong>
+              <small>Hier das Cover von „30 Cozy Coloring Rooms“ einsetzen</small>
+            </div>
+          </div>
+          <div class="book-content">
+            <h3>30 Cozy Coloring Rooms</h3>
+            <p>Gemütliche Zimmer und liebevolle Details zum Ausmalen und Abschalten.</p>
+            <div class="buttons">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Bei Amazon kaufen – Link einfügen</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Mehr zum Buch – Link einfügen</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Buch teilen – Link einfügen</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="book">
+          <div class="image-placeholder" role="img" aria-label="Platzhalter für das Cover von Cozy Capybara Coloring Book">
+            <div class="placeholder-inner">
+              <span class="symbol" aria-hidden="true">🦫 🌿</span>
+              <strong>GRAFIK-PLATZHALTER 3</strong>
+              <small>Hier das Cover von „Cozy Capybara Coloring Book“ einsetzen</small>
+            </div>
+          </div>
+          <div class="book-content">
+            <h3>Cozy Capybara Coloring Book</h3>
+            <p>Entspannte Capybaras und gemütliche Szenen für eine kleine kreative Auszeit.</p>
+            <div class="buttons">
+              <a class="btn primary" href="#" target="_blank" rel="noopener">Bei Amazon kaufen – Link einfügen</a>
+              <a class="btn" href="#" target="_blank" rel="noopener">Mehr zum Buch – Link einfügen</a>
+              <a class="btn secondary" href="#" target="_blank" rel="noopener">Buch teilen – Link einfügen</a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="note wrap">
+      <h2>Für die, die keine eigene Stimme haben. 🐾</h2>
+      <p>Jedes Tier verdient Schutz, Fürsorge und eine Chance auf ein besseres Leben. Danke, dass du unsere Aktion unterstützt, die Botschaft teilst und gemeinsam mit uns ein Zeichen für den Tierschutz setzt.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap">
+      <p><strong>Mit jedem Buch Gutes tun ❤️</strong></p>
+      <p>100 % des Gewinns nach Abzug aller Kosten gehen an VOTV – Tierschutz in der Türkei.</p>
+      <p>Bitte ersetze vor der Veröffentlichung alle Grafik- und Link-Platzhalter.</p>
+    </div>
+  </footer>
+</body>
+</html>
