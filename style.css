@@ -280,25 +280,29 @@ text-align:center;
 }
 
 
-/* Honig-Banner mit eigener Grafik */
 
+header {
+    position: relative;
+    overflow: hidden;
+    min-height: 195px;
+}
+
+/* Banner rechts im Header */
 .honey-banner {
     position: absolute;
     top: 0;
     right: 0;
 
-    width: min(58%, 760px);
-    height: 100%;
+    width: 42%;
+    height: 195px;
 
     padding: 0;
     margin: 0;
 
-    background: none;
+    background: transparent;
     clip-path: none;
 
-    display: block;
     overflow: hidden;
-
     z-index: 2;
 }
 
@@ -308,20 +312,23 @@ text-align:center;
     width: 100%;
     height: 100%;
 
-    object-fit: cover;
+    object-fit: contain;
     object-position: right center;
 }
 
 /* Mobile */
 @media (max-width: 768px) {
+    header {
+        min-height: auto;
+        padding-bottom: 20px;
+    }
+
     .honey-banner {
         position: relative;
-
         width: 100%;
         height: auto;
 
-        margin: 20px auto 0;
-        border-radius: 12px;
+        margin-top: 20px;
     }
 
     .honey-banner img {
