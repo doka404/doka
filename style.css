@@ -278,3 +278,165 @@ width:100%;
 text-align:center;
 
 }
+
+/* ============================= */
+/* SCHWESTERN HONIG - HEADER    */
+/* ============================= */
+
+header {
+    position: relative;
+    overflow: hidden;
+}
+
+/* Banner oben rechts */
+.honey-banner {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+
+    width: clamp(320px, 28vw, 460px);
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    padding: 25px 35px 25px 80px;
+
+    background:
+        radial-gradient(circle at 85% 80%, #fff4b8 0%, transparent 25%),
+        linear-gradient(135deg, #ffe58a, #ffc43d 55%, #ffdf75);
+
+    clip-path: polygon(42% 0, 100% 0, 100% 100%, 0 100%);
+
+    text-align: right;
+    z-index: 2;
+}
+
+/* Text im Banner */
+.honey-banner__content {
+    position: relative;
+    z-index: 2;
+    max-width: 280px;
+}
+
+/* Ab 2027 */
+.honey-banner__eyebrow {
+    display: block;
+
+    font-size: 1.2rem;
+    font-weight: 800;
+    color: #70400d;
+
+    margin-bottom: 4px;
+}
+
+/* Schwestern Honig */
+.honey-banner__title {
+    font-size: clamp(1.8rem, 2.5vw, 2.8rem);
+    line-height: 1.05;
+    font-weight: 900;
+
+    color: #68370b;
+    text-shadow: 0 2px 0 rgba(255,255,255,.35);
+
+    margin: 0;
+}
+
+/* Kleiner Untertitel */
+.honey-banner__subtitle {
+    font-size: .85rem;
+    font-weight: 600;
+    color: #70400d;
+
+    margin-top: 10px;
+}
+
+/* Dekoration */
+.honey-banner__decoration {
+    position: absolute;
+    right: 18px;
+    bottom: 12px;
+
+    font-size: 2rem;
+    letter-spacing: 5px;
+
+    z-index: 1;
+    opacity: .95;
+}
+
+/* Header-Text über dem Hintergrund halten */
+header .container {
+    position: relative;
+    z-index: 1;
+}
+
+/* ============================= */
+/* MOBILE                       */
+/* ============================= */
+
+@media (max-width: 768px) {
+
+    header {
+        padding: 35px 18px 25px;
+    }
+
+    header h1 {
+        font-size: 2.1rem;
+    }
+
+    .honey-banner {
+        position: relative;
+        top: auto;
+        right: auto;
+        bottom: auto;
+
+        width: 100%;
+        min-height: 145px;
+
+        margin: 28px auto 0;
+        padding: 25px 20px;
+
+        clip-path: none;
+        border-radius: 18px;
+
+        justify-content: center;
+        text-align: center;
+    }
+
+    .honey-banner__content {
+        max-width: 100%;
+    }
+
+    .honey-banner__title {
+        font-size: 2rem;
+    }
+
+    .honey-banner__decoration {
+        right: 10px;
+        bottom: 5px;
+        font-size: 1.5rem;
+    }
+}
+
+/* Sehr kleine Smartphones */
+@media (max-width: 420px) {
+
+    .honey-banner {
+        min-height: 130px;
+        padding: 20px 12px;
+    }
+
+    .honey-banner__title {
+        font-size: 1.7rem;
+    }
+
+    .honey-banner__eyebrow {
+        font-size: 1rem;
+    }
+
+    .honey-banner__subtitle {
+        font-size: .75rem;
+    }
+}
+
